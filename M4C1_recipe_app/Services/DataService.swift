@@ -44,6 +44,11 @@ class DataService {
                     recipeList = try decoder.decode([recipe].self, from: data)
                     for p in recipeList{
                         p.id = UUID()
+                        
+                        for i in p.ingredients{
+                            i.id = UUID()
+                        }
+                        
                     }
                     return recipeList
                 }
