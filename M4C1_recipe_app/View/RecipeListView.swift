@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RecipeListView: View {
-    @ObservedObject var recipes = recipeModel()
+    @EnvironmentObject var recipes : recipeModel
     
     var body: some View {
         
